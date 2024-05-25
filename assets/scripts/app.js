@@ -25,7 +25,15 @@ function shortenUrl(event) {
         code: code
     }
 
-    localStorage.setItem(code, JSON.stringify(shortUrl));
+    let shortedLinks = JSON.parse(localStorage.getItem('links'));
+
+    if (shortedLinks != null) {
+        shortedLinks.push(shortUrl);
+    } else {
+        shortedLinks = [shortUrl];
+    }
+
+    localStorage.setItem('links', JSON.stringify(shortedLinks));
 
     successSubmit();
 
