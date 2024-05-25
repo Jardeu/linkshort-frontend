@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    font-size: 100%;
+    line-height: inherit;
+}
+
+:root {
+    --color-gray: #cecece;
+    --color-text: #1e1e1e;
+    --color-background: #efefef;
+    --color-main: #003366;
+    --color-white: #ffffff;
+    --color-green: #33cc99;
+    --color-cyan: #00cccc;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--color-background);
+    color: var(--color-text);
+}
+
+input,
+button {
+    font-family: 'Poppins', sans-serif;
+}
+
+button {
+    background-color: var(--color-green);
+    border: 1px solid var(--color-green);
+    color: var(--color-white);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover,
+button:focus {
+    outline: none;
+    background-color: #248d6a;
+    border-color: #248d6a;
+}
+
+.container {
+    max-width: 1200px;
+    padding: 0px 15px;
+    margin: 0 auto;
+}
+
+section.short-form {
+    text-align: center;
+    padding: 62px 0;
+}
+
+section.short-form h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 62px;
+}
+
+section.short-form form {
+    display: flex;
+    justify-content: center;
+}
+
+section.short-form form input {
+    background-color: var(--color-white);
+    min-width: 450px;
+    padding: 10px 30px;
+    font-size: 16px;
+    border-top-left-radius: 35px;
+    border-bottom-left-radius: 35px;
+    border: 1px solid transparent;
+    transition: border-color 0.3s;
+}
+
+section.short-form form input:hover,
+section.short-form form input:focus {
+    outline: none;
+    border-color: var(--color-cyan);
+}
+
+section.short-form form input::placeholder {
+    color: var(--color-gray);
+    font-weight: 300;
+}
+
+section.short-form button {
+    border-top-right-radius: 35px;
+    border-bottom-right-radius: 35px;
+    padding: 10px 50px;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+section.short-form button:disabled {
+    cursor: not-allowed;
+    background-color: var(--color-gray);
+}
+
+.tooltip {
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    left: 90%;
+    top: 15%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s;
+
+    background-color: #53a653;
+    padding: 20px 20px;
+    max-width: 150px;
+    border-radius: 10px;
+
+    text-align: center;
+    font-size: 12px;
+}
+
+.tooltip.active {
+    visibility: visible;
+    opacity: 1;
+}
