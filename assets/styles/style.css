@@ -51,15 +51,63 @@ button:focus {
     margin: 0 auto;
 }
 
+header {
+    background-color: var(--color-main);
+    padding: 15px 20px;
+    box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+}
+
+header .container,
+header .container>div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header a {
+    text-decoration: none;
+}
+
+header h1 {
+    color: var(--color-white);
+    font-size: 40px;
+}
+
+header button {
+    background-color: var(--color-cyan);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    margin-right: 4rem;
+    font-size: 14px;
+}
+
+header a.profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: var(--color-background);
+    border-radius: 50%;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--color-text);
+}
+
+header button:hover {
+    background-color: #00acac;
+}
+
 section.short-form {
     text-align: center;
     padding: 62px 0;
 }
 
 section.short-form h2 {
-    font-size: 32px;
+    font-size: 28px;
     font-weight: 700;
-    margin-bottom: 62px;
+    margin-bottom: 30px;
 }
 
 section.short-form form {
@@ -69,7 +117,7 @@ section.short-form form {
 
 section.short-form form input {
     background-color: var(--color-white);
-    min-width: 450px;
+    min-width: 350px;
     padding: 10px 30px;
     font-size: 16px;
     border-top-left-radius: 35px;
