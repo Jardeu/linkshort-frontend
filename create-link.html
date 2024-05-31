@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar link curto | Linkshort</title>
+
+    <link rel="stylesheet" href="assets/styles/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <a href="#">
+                <h1>LinkShort</h1>
+            </a>
+            <div>
+                <button>Upgrade</button>
+                <a href="" class="profile">J</a>
+            </div>
+        </div>
+    </header>
+    <section class="short-form">
+        <div class="container">
+            <h2>Crie um link curto, limpo e amigável</h2>
+            <form id="shorten-url-form" onsubmit="return shortenUrl(event)">
+                <div class="form-field">
+                    <label for="link">Destino</label>
+                    <input type="text" name="link" id="link" placeholder="https://exemplo.com/minha-url-longa" required>
+                </div>
+                <div class="form-field">
+                    <label for="back-half">Sufixo personalizado (Opcional)</label>
+                    <input type="text" name="back-half" id="back-half">
+                </div>
+                <div class="form-field">
+                    <label for="title">Título (Opcional)</label>
+                    <input type="text" name="title" id="title">
+                </div>
+                <button type="submit">Encurtar</button>
+            </form>
+        </div>
+    </section>
+    <div class="tooltip" id="tooltip">
+        <p></p>
+    </div>
+</body>
+
+<script src="assets/scripts/app.js"></script>
+
+</html>

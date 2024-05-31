@@ -70,7 +70,7 @@ header a {
 
 header h1 {
     color: var(--color-white);
-    font-size: 40px;
+    font-size: 36px;
 }
 
 header button {
@@ -99,29 +99,80 @@ header button:hover {
     background-color: #00acac;
 }
 
-section.short-form {
-    text-align: center;
-    padding: 62px 0;
+.features .container>div {
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
 }
 
+.features .feature-card {
+    background-color: var(--color-white);
+    padding: 60px;
+    width: 240px;
+}
+
+.features .feature-card:first-child {
+    margin-right: 60px;
+}
+
+.feature-card p {
+    margin-bottom: 40px;
+}
+
+.feature-card a {
+    padding: 10px 25px;
+    border: 1px solid var(--color-green);
+    border-radius: 8px;
+    color: var(--color-green);
+    font-size: 14px;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.feature-card a:hover,
+.feature-card a:active {
+    background-color: var(--color-green);
+    color: var(--color-white);
+}
+
+section.features,
+section.short-form {
+    text-align: center;
+    padding: 50px 0;
+}
+
+section.features h2,
 section.short-form h2 {
     font-size: 28px;
     font-weight: 700;
-    margin-bottom: 30px;
+    margin-bottom: 24px;
 }
 
 section.short-form form {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+}
+
+section.short-form form .form-field {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-bottom: 25px;
+}
+
+section.short-form form label {
+    text-align: left;
+    margin-bottom: 8px;
+    font-size: 16px;
 }
 
 section.short-form form input {
     background-color: var(--color-white);
-    min-width: 350px;
     padding: 10px 30px;
     font-size: 16px;
-    border-top-left-radius: 35px;
-    border-bottom-left-radius: 35px;
+    border-radius: 35px;
     border: 1px solid transparent;
     transition: border-color 0.3s;
 }
@@ -138,11 +189,11 @@ section.short-form form input::placeholder {
 }
 
 section.short-form button {
-    border-top-right-radius: 35px;
-    border-bottom-right-radius: 35px;
+    border-radius: 35px;
     padding: 10px 50px;
     font-weight: 400;
     font-size: 18px;
+    margin-top: 25px;
 }
 
 section.short-form button:disabled {

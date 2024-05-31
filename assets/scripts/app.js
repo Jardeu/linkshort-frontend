@@ -17,12 +17,17 @@ function shortenUrl(event) {
     const formData = new FormData(form);
 
     const link = formData.get('link');
+    let code = formData.get('back-half');
+    const title = formData.get('title');
 
-    const code = generateCode(8);
+    if (code == null || code == '') {
+        code = generateCode(8);
+    }
 
     const shortUrl = {
         originalUrl: link,
-        code: code
+        code: code,
+        title: title
     }
 
     let shortedLinks = JSON.parse(localStorage.getItem('links'));
