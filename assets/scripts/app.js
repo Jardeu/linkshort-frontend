@@ -46,7 +46,8 @@ function shortenUrl(event) {
 }
 
 function successSubmit() {
-    const form = document.querySelector('#shorten-url-form');
+    window.location.replace('list-links.html')
+    /* const form = document.querySelector('#shorten-url-form');
 
     form.querySelector('input').value = '';
 
@@ -56,5 +57,5 @@ function successSubmit() {
     tooltip.classList.add('active');
     setTimeout(() => {
         tooltip.classList.remove('active');
-    }, 2000);
+    }, 2000); */
 }

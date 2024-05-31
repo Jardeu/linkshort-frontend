@@ -21,26 +21,35 @@
             </div>
         </div>
     </header>
-    <section class="short-form">
-        <div class="container">
-            <h2>Crie um link curto, limpo e amigável</h2>
-            <form id="shorten-url-form" onsubmit="return shortenUrl(event)">
-                <div class="form-field">
-                    <label for="link">Destino</label>
-                    <input type="text" name="link" id="link" placeholder="https://exemplo.com/minha-url-longa" required>
-                </div>
-                <div class="form-field">
-                    <label for="back-half">Sufixo personalizado (Opcional)</label>
-                    <input type="text" name="back-half" id="back-half">
-                </div>
-                <div class="form-field">
-                    <label for="title">Título (Opcional)</label>
-                    <input type="text" name="title" id="title">
-                </div>
-                <button type="submit">Encurtar</button>
-            </form>
+    <div class="page-wrapper">
+        <aside class="sidebar">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="list-links.html">Meus links</a></li>
+            </ul>
+        </aside>
+        <div class="main-content">
+            <section class="short-form">
+                <h2>Crie um link curto, limpo e amigável</h2>
+                <form id="shorten-url-form" onsubmit="return shortenUrl(event)">
+                    <div class="form-field">
+                        <label for="link">Destino</label>
+                        <input type="text" name="link" id="link" placeholder="https://exemplo.com/minha-url-longa"
+                            required>
+                    </div>
+                    <div class="form-field">
+                        <label for="back-half">Sufixo personalizado (Opcional)</label>
+                        <input type="text" name="back-half" id="back-half">
+                    </div>
+                    <div class="form-field">
+                        <label for="title">Título (Opcional)</label>
+                        <input type="text" name="title" id="title">
+                    </div>
+                    <button type="submit">Encurtar</button>
+                </form>
+            </section>
         </div>
-    </section>
+    </div>
     <div class="tooltip" id="tooltip">
         <p></p>
     </div>
