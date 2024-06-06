@@ -175,13 +175,15 @@ header button:hover {
 }
 
 section.features,
-section.short-form {
+section.short-form,
+section.my-links {
     text-align: center;
     padding: 50px 0;
 }
 
 section.features h2,
-section.short-form h2 {
+section.short-form h2,
+section.my-links h2 {
     font-size: 28px;
     font-weight: 700;
     margin-bottom: 24px;
@@ -238,6 +240,44 @@ section.short-form button {
 section.short-form button:disabled {
     cursor: not-allowed;
     background-color: var(--color-gray);
+}
+
+.card {
+    background-color: var(--color-white);
+    border-radius: 8px;
+    padding: 40px;
+    margin: 0 100px;
+    text-align: start;
+}
+
+.card .card-header {
+    border-bottom: 2px solid var(--color-gray);
+    padding-bottom: 10px;
+}
+
+.card .card-body ul {
+    list-style: none;
+}
+
+.card-body ul li {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 20px 0 20px;
+}
+
+.card-body ul li a {
+    text-decoration: none;
+    color: var(--color-text);
+    cursor: pointer;
+}
+
+.card-body ul li a:hover,
+.card-body ul li a:active {
+    color: var(--color-green);
+}
+
+.card-body ul li i {
+    margin-left: 8px;
 }
 
 .tooltip {
